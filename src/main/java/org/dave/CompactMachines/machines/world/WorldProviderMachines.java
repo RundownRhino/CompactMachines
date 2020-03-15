@@ -56,7 +56,7 @@ public class WorldProviderMachines extends WorldProvider {
 
 	@Override
 	public void registerWorldChunkManager() {
-		this.worldChunkMgr = new WorldChunkManagerHell(BiomeGenBase.sky, 0F);
+		this.worldChunkMgr = new WorldChunkManagerHell(BiomeGenBase.plains, 0F);
 		this.dimensionId = ConfigurationHandler.dimensionId;
 	}
 
