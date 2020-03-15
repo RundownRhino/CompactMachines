@@ -1,9 +1,11 @@
 buildscript {
     repositories {
-        mavenCentral()
+        maven {
+			url = "https://repo1.maven.org/maven2/"
+		}
         maven {
             name = "forge"
-            url = "http://files.minecraftforge.net/maven"
+            url = "https://files.minecraftforge.net/maven"
         }
         maven {
             name = "sonatype"
@@ -22,7 +24,7 @@ ext.config = parseConfig(file('build.properties'))
 ext.modVersion = "${config.version.mod.major}.${config.version.mod.minor}"
 
 version = "${config.version.minecraft}-${modVersion}"
-group= "com.dave.compactmachines" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group= "com.dave.compactmachines" // https://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "compactmachines"
 
 sourceCompatibility = 1.7
@@ -40,13 +42,13 @@ minecraft {
 repositories {
     maven {
         name = "IGW"
-        url = "http://maven.k-4u.nl/"
+        url = "https://maven.k-4u.nl/"
     }
 
 
     maven {
         name "FireBall API Depot"
-        url "http://dl.tsr.me/artifactory/libs-release-local"
+        url "https://dl.tsr.me/artifactory/libs-release-local"
     }
 }
 
@@ -62,8 +64,8 @@ dependencies {
     compile "igwmod:IGW-Mod-1.7.10:1.1.1-17:userdev"
 
     // for more info...
-    // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
-    // http://www.gradle.org/docs/current/userguide/dependency_management.html
+    // https://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
+    // https://www.gradle.org/docs/current/userguide/dependency_management.html
 }
 
 allprojects {
