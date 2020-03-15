@@ -46,7 +46,7 @@ public class WorldProviderMachines extends WorldProvider {
 
 	@Override
 	public void setAllowedSpawnTypes(boolean allowHostile, boolean allowPeaceful) {
-		super.setAllowedSpawnTypes(false, false);
+		super.setAllowedSpawnTypes(true, true);
 	}
 
 	@Override
